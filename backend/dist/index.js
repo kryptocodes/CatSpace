@@ -36,7 +36,7 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         console.log('server started on localhost:4000');
     });
 });
-main().catch((err) => {
+main().catch(err => {
     console.error(err);
 });
 //# sourceMappingURL=index.js.map
