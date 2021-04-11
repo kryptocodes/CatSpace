@@ -9,24 +9,19 @@ export type buttonProps = {
 }
 
 const sizeClassnames = {
-    big: "py-2 px-6 text-sm rounded-lg",
-    small: "px-2 py-1 text-xs rounded-md",
+    big: "px-28 py-5 text-sm hover:bg-katbtn-secondary",
+    small: "px-5 py-10 text-xs hover:bg-katbtn-secondary",
 };
 
 const colorClassnames = {
-    primaryColor: "background: #3797EF;",
-    primary:
-      "text-button bg-green-500 hover:bg-accent-hover disabled:text-accent-disabled disabled:bg-accent-hover",
-    secondary:
-      "text-button bg-primary-700 hover:bg-primary-600 disabled:text-primary-300",
-    "secondary-800":
-      "text-button bg-primary-800 hover:bg-primary-600 disabled:text-primary-300",
+    primaryColor: "bg-katbtn-primary ",
+    secondaryColor: "bg-katbtn-secondary"
   };
 
 
-export const Button: React.FC<buttonProps> = ({children, color = "primary", size ="big", className="", ...props}) => {
+export const Button: React.FC<buttonProps> = ({children, color="primaryColor", size ="big", className="", ...props}) => {
         return (
-            <button style={{background:'#3797EF'}} className={`${sizeClassnames[size]} ${colorClassnames[color]} font-bold items-center justify-center ${className}`}
+            <button className={`${sizeClassnames[size]} ${colorClassnames[color]}  font-bold items-center text-white justify-center ${className}`}
             {...props}
             >
                  <span >

@@ -10,22 +10,26 @@
     "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
-    "autoprefixer": "^9",
     "next": "10.1.3",
-    "postcss": "^7",
+    "postcss": "^8.2.9",
+    "postcss-import": "^14.0.1",
+    "postcss-loader": "4.2.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.32.8"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@storybook/react": "^6.2.5",
     "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
+    "autoprefixer": "^10.2.5",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.2.2",
     "postcss-preset-env": "^6.7.0",
     "react-docgen-typescript-loader": "^3.7.2",
-    "tailwindcss": "^2.0.1-compat",
+    "sass-loader": "10.1.1",
+    "tailwindcss": "^2.1.1",
     "typescript": "^4.2.3"
   }
 }

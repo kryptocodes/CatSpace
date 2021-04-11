@@ -14,3 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind screens;
+@tailwind utilities;

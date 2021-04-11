@@ -1,12 +1,13 @@
 import React from "react";
 import { Story } from "@storybook/react";
-import { Button, buttonProps } from './button'
+import { Button, buttonProps } from '../../components/button/button'
 import { toEnum } from "../utils/toEnum";
 import { toBoolean } from "../utils/toBoolean";
 
 export default {
   title: "Button",
-  argTypes: { onClick: { action: "clicked" } },
+  argTypes: { 
+    onClick: { action: "clicked" } },
 };
 
 const TheButton: Story<buttonProps> = ({
@@ -14,18 +15,16 @@ const TheButton: Story<buttonProps> = ({
   ...props
 }) => {
   return (
-    <Button {...props} >
+    <Button size={"small"} {...props} >
       {children || `Button`}
     </Button>
   );
 };
 
-export const Main = TheButton.bind({});
+export const Default_Button = TheButton.bind({});
 
-Main.argTypes = {
+Default_Button.argTypes = {
   color: toEnum(["primary", "secondary"]),
   size: toEnum(["big", "small"]),
   disabled: toBoolean(),
-  loading: toBoolean(),
-  exampleIcon: toBoolean(),
 };
