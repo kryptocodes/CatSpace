@@ -1,28 +1,33 @@
-const colors = require('./colors')
+const purgeEnabled = process.env.NODE_ENV === "production"
 
+console.log("\n")
+console.log(`   TailwindCSS \n`)
+console.log(`   ----------- \n`)
+console.log(`   ✅ purgeEnabled=${purgeEnabled}\n`)
 
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: {
+    enabled: purgeEnabled,
+    content: ["./src/**/*.html", "./src/**/*.tsx", "./src/**/*.jsx"]
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      black: colors.black,
-      white: colors.white,
-      gray: colors.coolGray,
-      red: colors.red,
-      yellow: colors.amber,
-      green: colors.emerald,
-      blue: colors.blue,
-      indigo: colors.indigo,
-      purple: colors.violet,
-      pink: colors.pink,
-      katbtn:colors.katbtn,
-    },
+    extend: {
+      colors: {
+        kat: {
+          primary:"#3797EF",
+          secondary:"#3085D3",
+        },
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active','focus'],
+      borderColor: ['focus-visible', 'first','active'],
+      textColor: ['visited','active'],
+      borderWidth: ['hover','focus','active'],
+    }
   },
-  plugins: [],
+  plugins: []
 }
