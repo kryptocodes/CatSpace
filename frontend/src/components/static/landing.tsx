@@ -42,7 +42,7 @@ const landing: React.FC<landingProps> = ({}) => {
           Be it a picture of a cute kitten in a cup, or an purr-rr picture. CatSpace is the purrfect platform to discover cat content
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <Button size="big" border="small">Sign Up</Button>
+            <Button size="big" ring="small">Sign Up</Button>
           </div>
         </div>
       </main>

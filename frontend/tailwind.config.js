@@ -27,6 +27,8 @@ module.exports = {
       borderColor: ['focus-visible', 'first','active'],
       textColor: ['visited','active'],
       borderWidth: ['hover','focus','active'],
+      ringWidth: ['hover', 'active'],
+      ringColor:['hover','active']
     }
   },
   plugins: []
