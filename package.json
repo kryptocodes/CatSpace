@@ -1,0 +1,20 @@
+{
+  "name": "catspace",
+  "version": "1.0.0",
+  "description": "CatSpace is a fun project made for MINI PROJECT where cat lovers can share and discover interesting cat pictures through catspace.",
+  "scripts": {
+   "build:storybook":"npm --prefix frontend run build-storybook",
+   "build:frontend":"npm --prefix frontend run build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kryptocodes/catspace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kryptocodes/s6_mp/issues"
+  },
+  "homepage": "https://github.com/kryptocodes/s6_mp#readme"
+}
