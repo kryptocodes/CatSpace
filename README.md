@@ -1,7 +1,7 @@
 # CatSpace
 
 CatSpace is a fun project made for MINI PROJECT
-Users can post pictures of cats and yeah totally about cats 
+where cat lovers can share and discover interesting cat pictures through catspace.
 
 **The Cat page for the internet**
 
