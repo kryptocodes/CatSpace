@@ -1,31 +1,6 @@
-# A [NextJS](https://nextjs.org/) template with typescript, tailwindcss and storybook support
+# Frontend
 
-> The configuration of NextJS, TailwindCSS and Storybook can be **complex** 😰 🤪
-> 👉 So we have decided to make this template public 🎉
-
-This project was bootstrapped with [npx create-next-app](https://nextjs.org/learn/basics/create-nextjs-app/setup) and we have added support for:
-
-- ✅ [Typescript](https://www.typescriptlang.org/)
-- ✅ [Taillwindcss](https://www.tailwindcss.com)
-- ✅ [Storybook](https://storybook.js.org/)
-- ✅ [Jest](https://jestjs.io/)
-- ✅ [Import SVG as React Component (SVGR)](https://react-svgr.com/) (Thanks to [@neoziro](https://twitter.com/neoziro))
-
-You are welcome to contribute to this project to make it better. Contact us at [contact@elitizon.com](contact@elitizon.com)
-
-Created with ❤️ by [Elitizon](https://www.elitizon.com)
-
-This template is available at [https://github.com/elitizon/nextjs-tailwind-storybook](https://github.com/elitizon/nextjs-tailwind-storybook)
-
-## To use this template:
-
-- clone it
-- remove the .git folder
-- git init .
-- git add .
-- git commit -m "First commit"
-
-## Structure of the template
+## Structure
 
 ```bash
 .
@@ -53,6 +28,7 @@ This template is available at [https://github.com/elitizon/nextjs-tailwind-story
 │   ├── components
 │   ├── pages
 │   └── styles
+│   └── stories
 ├── tailwind.config.js
 ├── tsconfig.json
 └── yarn.lock
@@ -180,10 +156,4 @@ To launch a **static server** from the `./out` directory. This command can be us
 
 `yarn build` and `yarn export` must be executed before to use this command.
 
-## Learn More
 
-You can learn more in the [NextJS documentation](https://nextjs.org/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-To learn how to develop UIs with component and design systems with Storybook, check out the [Learn Storybook documentation](https://www.learnstorybook.com/)
