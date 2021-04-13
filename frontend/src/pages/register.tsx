@@ -1,0 +1,45 @@
+import React from 'react'
+import Register from '../components/Register'
+import styled from "@emotion/styled"
+
+const Cover = styled.section`
+    background-image: ${() => `url(${require('../assets/image/kat.webp')})`};
+    background-size: cover;
+    background-position: top;
+    background-color:#e9e4e0;
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (max-width: 768px) {
+        background-image: unset !important;
+        background-color:#e9e4e0 !important;
+      }
+`
+
+const CoverWrap = styled.div`
+    width: 100%;
+    min-height: 100vh;
+
+    main {
+        padding-top:5rem;
+    }
+`
+
+const register: React.FC<any> = ({}) => {
+    return (
+        <>
+            <Cover>
+                <CoverWrap>
+                    <div className="md:w-full lg:w-3/6 pt-52 lg:px-24">
+                        <h1 className="text-4xl px-10 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                            <span className="block xl:inline">Cat Space</span>
+                        </h1>
+                        <Register />
+                    </div>
+                </CoverWrap>
+            </Cover>
+            </>
+        );
+}
+
+export default register

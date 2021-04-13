@@ -1,6 +1,7 @@
 import React from 'react'
-import styled from "@emotion/styled";
-import { Button } from '../button/button';
+import styled from "@emotion/styled"
+import { Button } from '../button/button'
+import NextLink from 'next/link'
 
 interface landingProps {
 
@@ -22,10 +23,6 @@ const Cover = styled.section`
 const CoverWrap = styled.div`
     width: 100%;
     min-height: 100vh;
-
-    main {
-        padding-top:5rem;
-    }
 `
 
 const landing: React.FC<landingProps> = ({}) => {
@@ -33,7 +30,7 @@ const landing: React.FC<landingProps> = ({}) => {
             <>
             <Cover>
                 <CoverWrap>
-              <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+              <main className="pt-32 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
         <div className="sm:text-center lg:text-left">
           <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             <span className="block xl:inline">Cat Space</span>
@@ -42,7 +39,9 @@ const landing: React.FC<landingProps> = ({}) => {
           Be it a picture of a cute kitten in a cup, or an purr-rr picture. CatSpace is the purrfect platform to discover cat content
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <Button size="big" ring="small">Sign Up</Button>
+              <NextLink href="/register">
+                        <Button size="small" ring="small" className="text-lg">Sign Up</Button>
+              </NextLink>
           </div>
         </div>
       </main>

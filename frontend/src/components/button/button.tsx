@@ -6,6 +6,7 @@ export type buttonProps = {
     ring?: keyof typeof ringSize;
     className?: String;
     children?: String;
+    type?: 'submit' | 'reset' | 'button';
 }
 
 const sizeClassnames = {
@@ -28,6 +29,7 @@ const ringSize = {
 export const Button: React.FC<buttonProps> = ({children, color="primary", size ="big", ring="medium", className="", ...props}) => {
         return (
             <button className={`${sizeClassnames[size]} ${colorClassnames[color]} active:${ringSize[ring]} active:ring-kat-primary active:bg-transparent active:text-kat-primary font-bold items-center text-white hover:bg-kat-secondary shadow-md justify-center ${className}`}
+            type="button"
             {...props}
             >
                  <span >
