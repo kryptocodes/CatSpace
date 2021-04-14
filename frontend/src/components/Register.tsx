@@ -2,17 +2,21 @@ import React from 'react'
 import { Button } from './button/button';
 import { Input } from './input/input'
 import { useForm } from "react-hook-form";
+import { useMutation } from 'urql';
 
 const Register = ({ }) => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data)
+  
+    const [] = useMutation(``)
+
     const Form = () => (
          <form className="px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit(onSubmit)}>
     <div className="mb-4">
-        <Input placeholder="Username" type="username"  {...register("username", { required: true })}/>
+        <Input required placeholder="Username" type="username"  {...register("username", { required: true })}/>
     </div>
     <div className="mb-6">
-      <Input placeholder="Password" type="password"  {...register("password", { required: true })}/>
+      <Input required placeholder="Password" type="password"  {...register("password", { required: true })}/>
             </div>
     <div className="flex items-end justify-end pb-4">
       <div>

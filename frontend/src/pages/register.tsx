@@ -30,11 +30,13 @@ const register: React.FC<any> = ({}) => {
         <>
             <Cover>
                 <CoverWrap>
-                    <div className="md:w-full lg:w-3/6 pt-52 lg:px-24">
+                    <div className="pt-32 lg:px-8 lg:pt-16 xl:pt-32">
                         <h1 className="text-4xl px-10 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                             <span className="block xl:inline">Cat Space</span>
                         </h1>
-                        <Register />
+                        <div className="lg:w-2/6 md:w-full">
+                            <Register />
+                        </div>
                     </div>
                 </CoverWrap>
             </Cover>

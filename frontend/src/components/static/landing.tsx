@@ -11,13 +11,12 @@ const Cover = styled.section`
     background-image: ${() => `url(${require('../../assets/image/kat.webp')})`};
     background-size: cover;
     background-position: top;
-    color: white;
     position: relative;
     overflow: hidden;
 
     @media only screen and (max-width: 768px) {
         background-image: unset !important;
-      }
+    }
 `
 
 const CoverWrap = styled.div`
@@ -30,7 +29,7 @@ const landing: React.FC<landingProps> = ({}) => {
             <>
             <Cover>
                 <CoverWrap>
-              <main className="pt-32 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+              <main className="pt-32 mx-auto max-w-7xl px-4">
         <div className="sm:text-center lg:text-left">
           <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             <span className="block xl:inline">Cat Space</span>
