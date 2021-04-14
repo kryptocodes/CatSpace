@@ -1,5 +1,5 @@
 import React from 'react'
-import Register from '../components/Register'
+import Login from '../components/Login'
 import styled from "@emotion/styled"
 
 const Cover = styled.section`
@@ -25,7 +25,7 @@ const CoverWrap = styled.div`
     }
 `
 
-const register: React.FC<any> = ({}) => {
+const login: React.FC<any> = ({}) => {
     return (
         <>
             <Cover>
@@ -35,7 +35,7 @@ const register: React.FC<any> = ({}) => {
                             <span className="block xl:inline">Cat Space</span>
                         </h1>
                         <div className="lg:w-2/6 md:w-full">
-                            <Register />
+                            <Login/>
                         </div>
                     </div>
                 </CoverWrap>
@@ -44,4 +44,4 @@ const register: React.FC<any> = ({}) => {
         );
 }
 
-export default register
+export default login
