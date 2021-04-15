@@ -7,29 +7,38 @@ import { toErrorMap } from './utils/toErrorMap';
 
 import { useRouter } from 'next/router'
 
-const Login = ({ }) => {
-    const router = useRouter()
+
+
+const Login : React.FC<any> = ({ }) => {
+  const router = useRouter()
+  const [errorMessage,setErrorMessage] = React.useState<any>({})
     const [, login] = useLoginMutation()
-     const { register, handleSubmit, setError } = useForm();
+     const { register, handleSubmit,reset } = useForm();
   const onSubmit = async (values) => {
     const response = await login(values);
     if (response.data?.login.errors) {
-      console.log(toErrorMap(response.data.login.errors))
+      setErrorMessage(toErrorMap(response.data.login.errors))
+      reset(values)
     } else if (response.data?.login.user) {
       router.push("/")
     }
   }
   
+  const ErrorBox = ({ message }) => {
+    return(
+      <p className="inline-block text-red-800 pt-2">{message}</p>
+    )
+  }
 
     const Form = () => (
          <form className="px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit(onSubmit)}>
     <div className="mb-4">
-        <Input required placeholder="Username" type="username"  {...register("username", { required: true })}/>
-
+        <Input required error={errorMessage?.username } placeholder="Username" type="username"  {...register("username", { required: "username is required" })}/>
+          {errorMessage?.username  && <ErrorBox message={errorMessage?.username} />}
       </div>
     <div className="mb-6">
-      <Input required placeholder="Password" type="password"  {...register("password", { required: true })}/>
-    
+      <Input required error={errorMessage?.password} placeholder="Password" type="password"  {...register("password", { required: "password is required" })}/>
+          {errorMessage?.password && <ErrorBox message={errorMessage?.password} />}
       </div>
     <div className="flex items-end justify-end pb-4">
       <div>
@@ -40,7 +49,7 @@ const Login = ({ }) => {
                 </div>
     <div className="flex items-center justify-between">
     <Button size="big" className="w-full" type="submit">Log In</Button>
-    </div>
+        </div>
   </form>
     )
 
