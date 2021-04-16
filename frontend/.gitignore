@@ -32,5 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+build-storybook.log
 
 src/tailwind.output.css

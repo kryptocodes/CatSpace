@@ -25,7 +25,7 @@ export const Default_Button = TheButton.bind({});
 
 Default_Button.argTypes = {
   color: toEnum(["primary", "secondary"]),
-  size: toEnum(["big", "small"]),
+  size: toEnum(["big", "small","sm"]),
   ring: toEnum(["small","medium","large"]),
   disabled: toBoolean(),
 };

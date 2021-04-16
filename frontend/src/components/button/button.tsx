@@ -11,8 +11,9 @@ export type buttonProps = {
 }
 
 const sizeClassnames = {
-    big: "px-28 py-5 text-sm",
+    big: "px-28 py-5",
     small: "px-10 py-4 text-xs rounded-md",
+    sm: "px-5 py-4 rounded-md"
 };
 
 const colorClassnames = {

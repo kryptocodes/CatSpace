@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavbarStatic } from '../components/navbar/navbarStatic';
 import Landing from '../components/static/landing'
 
 
@@ -6,7 +7,10 @@ import Landing from '../components/static/landing'
 const index = ({}) => {
     return (
       <>
-        <Landing/>
+        <div style={{ background: "#e9e4e0" }}>
+          <NavbarStatic/>
+          <Landing />
+        </div>
       </>
     );
 }

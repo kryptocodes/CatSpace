@@ -26,9 +26,9 @@ const CoverWrap = styled.div`
 
 const landing: React.FC<landingProps> = ({}) => {
         return (
-            <>
+          <>
             <Cover>
-                <CoverWrap>
+              <CoverWrap>
               <main className="pt-32 mx-auto max-w-7xl px-4">
         <div className="sm:text-center lg:text-left">
           <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
