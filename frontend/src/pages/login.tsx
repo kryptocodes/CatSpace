@@ -26,7 +26,7 @@ const CoverWrap = styled.div`
     }
 `
 
-const dashboard: React.FC<any> = ({ }) => {
+const login: React.FC<any> = ({ }) => {
     isUser()
     return (
         <div style={{backgroundColor:"#e9e4e0"}}>
@@ -47,4 +47,4 @@ const dashboard: React.FC<any> = ({ }) => {
         );
 }
 
-export default dashboard
+export default login
