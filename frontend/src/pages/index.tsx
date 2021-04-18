@@ -8,7 +8,7 @@ const index = ({}) => {
     return (
       <>
         <div style={{ background: "#e9e4e0" }}>
-          <NavbarStatic/>
+          <NavbarStatic Link="/login"/>
           <Landing />
         </div>
       </>

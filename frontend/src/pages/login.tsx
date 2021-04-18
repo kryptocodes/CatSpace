@@ -1,6 +1,8 @@
 import React from 'react'
 import Login from '../components/Login'
 import styled from "@emotion/styled"
+import { NavbarStatic } from '../components/navbar/navbarStatic'
+import { isUser } from '../components/utils/isUser'
 
 const Cover = styled.section`
     background-image: ${() => `url(${require('../assets/image/kat.webp')})`};
@@ -12,8 +14,7 @@ const Cover = styled.section`
 
     @media only screen and (max-width: 768px) {
         background-image: unset !important;
-        background-color:#e9e4e0 !important;
-      }
+    }
 `
 
 const CoverWrap = styled.div`
@@ -25,9 +26,11 @@ const CoverWrap = styled.div`
     }
 `
 
-const login: React.FC<any> = ({}) => {
+const dashboard: React.FC<any> = ({ }) => {
+    isUser()
     return (
-        <>
+        <div style={{backgroundColor:"#e9e4e0"}}>
+            <NavbarStatic text="Sign Up" Link="/signup"/>
             <Cover>
                 <CoverWrap>
                     <div className="pt-32 lg:px-8 lg:pt-16 xl:pt-32">
@@ -40,8 +43,8 @@ const login: React.FC<any> = ({}) => {
                     </div>
                 </CoverWrap>
             </Cover>
-            </>
+            </div>
         );
 }
 
-export default login
+export default dashboard

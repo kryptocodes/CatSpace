@@ -12,7 +12,7 @@ import { useRouter } from 'next/router'
 const Login : React.FC<any> = ({ }) => {
   const router = useRouter()
   const [errorMessage,setErrorMessage] = React.useState<any>({})
-    const [, login] = useLoginMutation()
+  const [, login] = useLoginMutation()
      const { register, handleSubmit,reset } = useForm();
   const onSubmit = async (values) => {
     const response = await login(values);
@@ -20,7 +20,7 @@ const Login : React.FC<any> = ({ }) => {
       setErrorMessage(toErrorMap(response.data.login.errors))
       reset(values)
     } else if (response.data?.login.user) {
-      router.push("/")
+      router.push("/dashboard")
     }
   }
   
