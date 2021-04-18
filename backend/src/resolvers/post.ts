@@ -19,21 +19,23 @@ export class PostResolver {
     @Mutation(() => Post) 
     async createPost(
         @Arg('title') title: string,
+        @Arg('image') image: string,
     ): Promise<Post> {
-        return Post.create({ title }).save()
+        return Post.create({ title,image}).save()
     }
 
     @Mutation(() => Post, {nullable: true}) 
     async updatePost(
         @Arg('id') id: number,
-        @Arg('title', () => String, { nullable: true}) title: string,
+        @Arg('title', () => String, { nullable: true }) title: string,
+        @Arg('title', () => String, { nullable: true}) image: string,
     ): Promise<Post | null> {
         const post = await Post.findOne(id);
         if (!post) {
             return null;
         }
         if (typeof title !== "undefined") {
-            Post.update({ id }, { title });
+            Post.update({ id }, { title,image });
         }
         
         return post;

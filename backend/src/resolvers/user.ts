@@ -25,16 +25,13 @@ class UserResponse {
 }
 @Resolver()
 export class UserResolver {
-  @Query(() => User, { nullable: true })
-  me(
-    @Ctx() { req }: MyContext
-  ) {
+   @Query(() => User, { nullable: true })
+  me(@Ctx() { req }: MyContext) {
     if (!req.session.userId) {
-      return null
+      return null;
     }
 
-    return User.findOne(req.session.userId)
-    
+    return User.findOne(req.session.userId);
   }
 
   @Mutation(() => UserResponse)
@@ -86,7 +83,7 @@ export class UserResolver {
   
   @Mutation(() => UserResponse)
   async login(
-    @Arg("usernameOrEmail") usernameOrEmail: string,
+    @Arg("username") usernameOrEmail: string,
     @Arg("password") password: string,
     @Ctx() { req }: MyContext
   ): Promise<UserResponse> {
@@ -99,7 +96,7 @@ export class UserResolver {
       return {
         errors: [
           {
-            field: "usernameOrEmail",
+            field: "username",
             message: "that username doesn't exist",
           },
         ],
