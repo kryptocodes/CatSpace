@@ -27,6 +27,8 @@ const typeorm_1 = require("typeorm");
 const path_1 = __importDefault(require("path"));
 const post_2 = require("./entities/post");
 const user_2 = require("./entities/user");
+const upvote_1 = require("./entities/upvote");
+const comments_1 = require("./entities/comments");
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     const conn = yield typeorm_1.createConnection({
         type: 'postgres',
@@ -36,7 +38,7 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         logging: true,
         synchronize: true,
         migrations: [path_1.default.join(__dirname, "./migrations/*")],
-        entities: [post_2.Post, user_2.User]
+        entities: [post_2.Post, user_2.User, upvote_1.Upvote, comments_1.Comment]
     });
     const app = express_1.default();
     let RedisStore = (connect_redis_1.default)(express_session_1.default);
