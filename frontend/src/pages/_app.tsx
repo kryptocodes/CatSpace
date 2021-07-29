@@ -1,5 +1,6 @@
 import { Provider, createClient } from 'urql'
 import '../styles/tailwind.css'
+import 'react-responsive-modal/styles.css';
 
 const client = createClient({
   url: 'http://localhost:4000/graphql',

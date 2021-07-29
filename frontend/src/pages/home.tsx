@@ -1,25 +1,26 @@
 import React   from 'react'
-import Dashboard from '../components/layout/Dashboard';
+import Home from '../components/layout/Home';
 import Wrapper from '../components/layout/Wrapper';
 import NavBar from '../components/navbar/NavBar';
 import { isAuth } from '../components/utils/isAuth';
+import { isUser } from '../components/utils/isUser';
 import { useMeQuery } from '../generated/graphql';
 
 interface homeProps {
 
 }
 
-const dashboard: React.FC<homeProps> = ({ }) => {
+const home: React.FC<homeProps> = ({ }) => {
     const [{ data, fetching }] = useMeQuery()
     isAuth()
     return (
         <>
             <Wrapper>
                 <NavBar />
-                <Dashboard username={data?.me?.username}/>
+                <Home/>
             </Wrapper>
             </>
         );
 }
 
-export default dashboard
+export default home

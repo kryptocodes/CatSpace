@@ -3,6 +3,7 @@ import Login from '../components/Login'
 import styled from "@emotion/styled"
 import { NavbarStatic } from '../components/navbar/navbarStatic'
 import { isUser } from '../components/utils/isUser'
+import { isAuth } from '../components/utils/isAuth'
 
 const Cover = styled.section`
     background-image: ${() => `url(${require('../assets/image/kat.webp')})`};
@@ -27,7 +28,6 @@ const CoverWrap = styled.div`
 `
 
 const login: React.FC<any> = ({ }) => {
-    isUser()
     return (
         <div style={{backgroundColor:"#e9e4e0"}}>
             <NavbarStatic text="Sign Up" Link="/signup"/>

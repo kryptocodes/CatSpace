@@ -7,7 +7,7 @@ export const isUser = () => {
     const router = useRouter()
     useEffect(() => {
         if (data?.me && router.pathname.includes('login')) {
-            router.push("/dashboard")
+            router.push("/home")
         }
     }, [fetching,data,router])
 }

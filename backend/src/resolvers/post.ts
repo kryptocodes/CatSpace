@@ -4,6 +4,7 @@ import { Arg, Ctx, FieldResolver, Int, Mutation, Query, Resolver, Root } from 't
 import { User } from '../entities/user';
 import { Upvote } from '../entities/upvote';
 import { MyContext } from 'src/types';
+import { getConnection } from 'typeorm';
 
 @Resolver(Post)
 export class PostResolver {    
@@ -19,7 +20,12 @@ export class PostResolver {
     }
     @Query(() => [Post])
     posts(): Promise<Post[]> {
-        return Post.find()
+     
+      return ( getConnection()
+      .getRepository(Post)
+      .createQueryBuilder("p")
+          .orderBy('p."createdAt"', "DESC")
+      .getMany() )
     }
 
     @Query(() => Post,{ nullable: true }) 

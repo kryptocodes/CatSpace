@@ -31,7 +31,7 @@ const Dashboard: React.FC<DashboardProps> = ({ username="niku" }) => {
             </div>
             <div className="grid justify-items-center grid-cols-3 divide-x">
                 <div>
-                 
+                    
                 </div>
                 <div>
                     <h1>No Post</h1>

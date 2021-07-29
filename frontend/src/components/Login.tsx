@@ -20,7 +20,7 @@ const Login : React.FC<any> = ({ }) => {
       setErrorMessage(toErrorMap(response.data.login.errors))
       reset(values)
     } else if (response.data?.login.user) {
-      router.push("/dashboard")
+      router.push("/home")
     }
   }
   

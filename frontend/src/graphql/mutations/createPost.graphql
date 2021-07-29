@@ -1,0 +1,14 @@
+mutation createPost($title: String!, $image: String!) {
+  createPost(title: $title, image: $image) {
+    id
+    createdAt
+    title
+    image
+    upvoteCount
+    creator {
+      id
+      username
+      email
+    }
+  }
+}
